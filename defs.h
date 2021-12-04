@@ -9,5 +9,4 @@
 #define STACK_SIZE 1024
 #define USE_UTF8
 #define NO_STRDUP
-//#define NO_BLORB
 #endif /* COMMON_DEFINES_H */
