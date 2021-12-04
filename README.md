@@ -11,55 +11,35 @@ Ported to Unix by Galen Hazelwood.
 This is how I compiled this, the source was tweaked to get EDK2 to compile it  
 Using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and installed it from ISO)
 
-------
-All RUN commands are in same terminal window
+
 ------  
 
 **RUN**
 
-`sudo apt-get install build-essential git uuid-dev iasl nasm python python3-distutils python3-apt -y`  
-`git clone https://github.com/tianocore/edk2.git`  
-`git clone https://github.com/tianocore/edk2-libc.git `  
-`mv edk2-libc/AppPkg edk2`  
-`mv edk2-libc/StdLib edk2`  
-`mv edk2-libc/StdLibPrivateInternalFiles edk2`  
-`rm edk2-libc -r -f`  
-`cd edk2`  
-`git submodule update --init `  
-`cd BaseTools`  
-`make`  
-`cd ..`  
-`. ./edksetup.sh`  
-`cd AppPkg/Applications`  
-`git clone https://github.com/go2tom42/Frotz-UEFI`  
-`cd ..`  
-`cd ..`  
-
-------
-
-**ADD LINE** to `edk2/StdLib/Include/libgen.h`  
-`char  *basename(char *);`  
-
-------
-
-**EDIT FILE** `edk2/AppPkg/AppPkg.dsc`  
-
-add "`  AppPkg/Applications/Frotz-UEFI/Frotz.inf`"  
-to `[Components]` section  
-
-------
-
-**EDIT FILE** `/edk2/Conf/target.txt`  
-
-Change "`ACTIVE_PLATFORM       = EmulatorPkg/EmulatorPkg.dsc`" to "`ACTIVE_PLATFORM       = AppPkg/AppPkg.dsc`"  
-Change "`TARGET_ARCH           = IA32`" to "`TARGET_ARCH           = X64`"  
-Change "`TOOL_CHAIN_TAG        = VS2015x86`" to "`TOOL_CHAIN_TAG        = GCC5`"  
-
-------
-
-**RUN**
-
-`build`
+sudo apt-get install build-essential git uuid-dev iasl nasm python python3-distutils python3-apt -y
+git clone https://github.com/tianocore/edk2.git
+git clone https://github.com/tianocore/edk2-libc.git
+mv edk2-libc/AppPkg edk2
+mv edk2-libc/StdLib edk2
+mv edk2-libc/StdLibPrivateInternalFiles edk2
+rm edk2-libc -r -f
+cd edk2
+git submodule update --init
+cd BaseTools
+make
+cd ..
+. ./edksetup.sh
+cd AppPkg/Applications
+git clone https://gitlab.com/DavidGriffith/frotz
+cd ..
+cd ..
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/AppPkg.dsc -O AppPkg/AppPkg.dsc
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/defs.h -O AppPkg/Applications/frotz/src/common/defs.h
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/Frotz.inf -O AppPkg/Applications/frotz/Frotz.inf
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/hash.h -O AppPkg/Applications/frotz/src/common/hash.h
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/libgen.h -O StdLib/Include/libgen.h
+wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/target.txt  -O Conf/target.txt
+build
 
 **COMPLETE**
 
