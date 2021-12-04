@@ -1,0 +1,68 @@
+## @file
+
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = Frotz
+  FILE_GUID                      = 53852d51-9444-4836-b23b-f76db1030979
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = ShellCEntryLib
+
+#
+#  VALID_ARCHITECTURES           = X64
+#
+
+[Sources]
+  src/common/missing.c
+  src/common/buffer.c
+  src/common/err.c
+  src/common/fastmem.c
+  src/common/files.c
+  src/common/frotz.h
+  src/common/getopt.c
+  src/common/hotkey.c
+  src/common/input.c
+  src/common/main.c
+  src/common/math.c
+  src/common/missing.h
+  src/common/object.c
+  src/common/process.c
+  src/common/quetzal.c
+  src/common/random.c
+  src/common/redirect.c
+  src/common/screen.c
+  src/common/setup.h
+  src/common/sound.c
+  src/common/stream.c
+  src/common/table.c
+  src/common/text.c
+  src/common/unused.h
+  src/common/variable.c
+  src/blorb/blorb.h
+  src/blorb/blorblib.c
+  src/dumb/dblorb.c
+  src/dumb/dblorb.h
+  src/dumb/dfrotz.h
+  src/dumb/dinit.c
+  src/dumb/dinput.c
+  src/dumb/doutput.c
+  src/dumb/dpic.c
+[Packages]
+  StdLib/StdLib.dec
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  LibC
+  LibString
+  LibStdio
+  LibGdtoa
+  LibWchar
+  LibMath
+  DevShell
+  DevConsole
+
+[BuildOptions]
+  INTEL:*_*_*_CC_FLAGS    = /Qdiag-disable:181,186
+   MSFT:*_*_*_CC_FLAGS    = /Od
+    GCC:*_*_*_CC_FLAGS    = -O2 -DCONFIG_DIR=\".\" -DVERSION=\"2.54\"
