@@ -8,7 +8,7 @@ Ported to Unix by Galen Hazelwood.
 
 ------
 
-This is how I compiled this, using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and installed it from ISO)
+Here is how to compile, using a fresh Ubuntu Desktop 64-bit 20.04 LTS install (I spun of a VM in windows and installed it from ISO)
 
 
 ------  
