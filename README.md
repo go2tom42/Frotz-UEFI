@@ -16,9 +16,16 @@ Using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and insta
 
 **RUN**
 
+
 `sudo apt-get install build-essential git uuid-dev iasl nasm python python3-distutils python3-apt -y`  
 `git clone https://github.com/tianocore/edk2.git`  
+`cd edk2`  
+`git reset --hard dfafa8e45382939fb5dc78e9d37b97b500a43613`  
+`cd ..`  
 `git clone https://github.com/tianocore/edk2-libc.git`  
+`cd edk2-libc`  
+`git reset --hard 0fdfe2175459ace25e5bcfe5acedd2dd54ebfe05`  
+`cd ..`  
 `mv edk2-libc/AppPkg edk2`  
 `mv edk2-libc/StdLib edk2`  
 `mv edk2-libc/StdLibPrivateInternalFiles edk2`  
@@ -31,6 +38,9 @@ Using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and insta
 `. ./edksetup.sh`  
 `cd AppPkg/Applications`  
 `git clone https://gitlab.com/DavidGriffith/frotz`  
+`cd frotz`  
+`git reset --hard 5d91b3c0d06092cc86e598fc7dec718a84e4e3e7`  
+`cd ..`  
 `cd ..`  
 `cd ..`  
 `wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/AppPkg.dsc -O AppPkg/AppPkg.dsc`  
@@ -43,4 +53,4 @@ Using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and insta
 
 **COMPLETE**
 
-The file you want is located at `edk2/Build/AppPkg/DEBUG_GCC5/X64/AppPkg/Applications/Frotz-UEFI/Frotz/OUTPUT/Frotz.efi`
+The file you want is located at `edk2/Build/AppPkg/DEBUG_GCC5/X64/AppPkg/Applications/frotz/Frotz/OUTPUT/Frotz.efi`
