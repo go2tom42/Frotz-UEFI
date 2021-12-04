@@ -8,8 +8,7 @@ Ported to Unix by Galen Hazelwood.
 
 ------
 
-This is how I compiled this, the source was tweaked to get EDK2 to compile it  
-Using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and installed it from ISO)
+This is how I compiled this, using fresh Ubuntu Desktop 64-bit 20.04 LTS (I spun of a VM in windows and installed it from ISO)
 
 
 ------  
