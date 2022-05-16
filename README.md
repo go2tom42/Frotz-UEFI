@@ -55,3 +55,8 @@ Here is how to compile, using a fresh Ubuntu Desktop 64-bit 22.04 LTS install (I
 **COMPLETE**
 
 The file you want is located at `edk2/Build/AppPkg/DEBUG_GCC5/X64/AppPkg/Applications/frotz/Frotz/OUTPUT/Frotz.efi`
+
+
+**EXTRA**  
+Instead of the above just run  
+`sudo wget -qO - https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v2.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-22.04-LTS/installme.sh | bash`
