@@ -45,12 +45,12 @@ If you let Ubuntu Desktop 64-bit 20.04 LTS autoupdate 'build-essential' will not
 `cd ..`  
 `cd ..`  
 `cd ..`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/AppPkg.dsc -O AppPkg/AppPkg.dsc`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/defs.h -O AppPkg/Applications/frotz/src/common/defs.h`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/Frotz.inf -O AppPkg/Applications/frotz/Frotz.inf`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/hash.h -O AppPkg/Applications/frotz/src/common/hash.h`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/libgen.h -O StdLib/Include/libgen.h`  
-`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/main/target.txt  -O Conf/target.txt`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/AppPkg.dsc -O AppPkg/AppPkg.dsc`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/defs.h -O AppPkg/Applications/frotz/src/common/defs.h`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/Frotz.inf -O AppPkg/Applications/frotz/Frotz.inf`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/hash.h -O AppPkg/Applications/frotz/src/common/hash.h`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/libgen.h -O StdLib/Include/libgen.h`  
+`wget -q https://raw.githubusercontent.com/go2tom42/Frotz-UEFI/v1.0.0-FROTZ-UEFI-V2.54-on-Ubuntu-20.04-LTS/target.txt  -O Conf/target.txt`  
 `build`  
 
 **COMPLETE**
