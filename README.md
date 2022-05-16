@@ -9,7 +9,6 @@ Ported to Unix by Galen Hazelwood.
 ------
 
 Here is how to compile, using a fresh Ubuntu Desktop 64-bit 22.04 LTS install (I spun of a VM in windows and installed it from ISO)  
-When installing unselect download updates  
 
 
 ------  
