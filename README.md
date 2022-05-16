@@ -8,10 +8,8 @@ Ported to Unix by Galen Hazelwood.
 
 ------
 
-Here is how to compile, using a fresh Ubuntu Desktop 64-bit 20.04.3 LTS install (I spun of a VM in windows and installed it from ISO)  
- When installing unselect download updates  
-If you let Ubuntu Desktop 64-bit 20.04 LTS autoupdate 'build-essential' will not install, this is a [known bug](https://bugs.launchpad.net/ubuntu/+source/build-essential/+bug/1920753)
-
+Here is how to compile, using a fresh Ubuntu Desktop 64-bit 22.04 LTS install (I spun of a VM in windows and installed it from ISO)  
+When installing unselect download updates  
 
 
 ------  
