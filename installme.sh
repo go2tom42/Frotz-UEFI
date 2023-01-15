@@ -1,3 +1,4 @@
+sudo apt update
 sudo apt-get install build-essential git uuid-dev iasl nasm python3-distutils python3-apt -y
 git clone https://github.com/tianocore/edk2.git
 cd edk2
